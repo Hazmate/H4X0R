@@ -13,6 +13,10 @@
 		EA68B9B824116A0100AF220E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA68B9B724116A0100AF220E /* Assets.xcassets */; };
 		EA68B9BB24116A0100AF220E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA68B9BA24116A0100AF220E /* Preview Assets.xcassets */; };
 		EA68B9BE24116A0100AF220E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA68B9BC24116A0100AF220E /* LaunchScreen.storyboard */; };
+		EA68B9C724116E6900AF220E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA68B9C624116E6900AF220E /* NetworkManager.swift */; };
+		EA68B9C92411701800AF220E /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA68B9C82411701800AF220E /* PostData.swift */; };
+		EABCD4082412B0EA005C1B3B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCD4072412B0EA005C1B3B /* DetailView.swift */; };
+		EABCD40A2412B39F005C1B3B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABCD4092412B39F005C1B3B /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		EA68B9BA24116A0100AF220E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA68B9BD24116A0100AF220E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA68B9BF24116A0100AF220E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA68B9C624116E6900AF220E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EA68B9C82411701800AF220E /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		EA93683824142E0400F9DD38 /* H4X0R.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = H4X0R.entitlements; sourceTree = "<group>"; };
+		EABCD4072412B0EA005C1B3B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		EABCD4092412B39F005C1B3B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +65,11 @@
 		EA68B9B0241169FF00AF220E /* H4X0R */ = {
 			isa = PBXGroup;
 			children = (
+				EA93683824142E0400F9DD38 /* H4X0R.entitlements */,
+				EA68B9C524116E5700AF220E /* Models */,
 				EA68B9B1241169FF00AF220E /* AppDelegate.swift */,
 				EA68B9B3241169FF00AF220E /* SceneDelegate.swift */,
-				EA68B9B5241169FF00AF220E /* ContentView.swift */,
+				EABCD4062412B0CD005C1B3B /* Views */,
 				EA68B9B724116A0100AF220E /* Assets.xcassets */,
 				EA68B9BC24116A0100AF220E /* LaunchScreen.storyboard */,
 				EA68B9BF24116A0100AF220E /* Info.plist */,
@@ -73,6 +84,25 @@
 				EA68B9BA24116A0100AF220E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EA68B9C524116E5700AF220E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA68B9C624116E6900AF220E /* NetworkManager.swift */,
+				EA68B9C82411701800AF220E /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EABCD4062412B0CD005C1B3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA68B9B5241169FF00AF220E /* ContentView.swift */,
+				EABCD4072412B0EA005C1B3B /* DetailView.swift */,
+				EABCD4092412B39F005C1B3B /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA68B9C92411701800AF220E /* PostData.swift in Sources */,
+				EABCD4082412B0EA005C1B3B /* DetailView.swift in Sources */,
+				EA68B9C724116E6900AF220E /* NetworkManager.swift in Sources */,
 				EA68B9B2241169FF00AF220E /* AppDelegate.swift in Sources */,
 				EA68B9B4241169FF00AF220E /* SceneDelegate.swift in Sources */,
 				EA68B9B6241169FF00AF220E /* ContentView.swift in Sources */,
+				EABCD40A2412B39F005C1B3B /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +318,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = H4X0R/H4X0R.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R/Preview Content\"";
 				DEVELOPMENT_TEAM = 359V4VN4WD;
 				ENABLE_PREVIEWS = YES;
@@ -295,6 +331,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = HazemanDev.H4X0R;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,7 +341,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = H4X0R/H4X0R.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R/Preview Content\"";
 				DEVELOPMENT_TEAM = 359V4VN4WD;
 				ENABLE_PREVIEWS = YES;
@@ -315,6 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = HazemanDev.H4X0R;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
